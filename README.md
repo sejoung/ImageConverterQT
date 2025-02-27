@@ -1,5 +1,5 @@
 # ImageConverterQT
 
 ```
-PyInstaller src/image/Image_converter.py
+PyInstaller --onefile --windowed --noconsole --clean src/image/Image_converter.py
 ```
