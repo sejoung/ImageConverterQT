@@ -1,5 +1,5 @@
 # ImageConverterQT
 
 ```
-PyInstaller --onefile --windowed --noconsole --clean --icon=icon.icon src/image/Image_converter.py
+PyInstaller --onefile --windowed --noconsole --clean --icon=icon.ico src/image/Image_converter.py
 ```
