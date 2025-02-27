@@ -23,7 +23,7 @@ class ImageConverter(QWidget):
         self.btn_select_folder.clicked.connect(self.select_folder)
 
         self.combo_format = QComboBox(self)
-        self.combo_format.addItems(["Convert to JPG", "Convert to PNG"])
+        self.combo_format.addItems(["Convert PNG to JPG", "Convert JPG to PNG"])
 
         self.btn_convert = QPushButton('Convert Images', self)
         self.btn_convert.clicked.connect(self.convert_images)
@@ -73,13 +73,13 @@ class ImageConverter(QWidget):
             image_path = os.path.join(self.folder_path, file)
 
             # 변환 대상에 맞는 확장자 설정
-            if target_format == "Convert to JPG":
+            if target_format == "Convert PNG to JPG":
                 if file.lower().endswith(".jpg") or file.lower().endswith(".jpeg"):
                     continue  # 이미 JPG인 파일은 변환하지 않음
                 new_path = image_path.rsplit(".", 1)[0] + ".jpg"
                 img = Image.open(image_path)
                 img.convert("RGB").save(new_path, "JPEG")
-            elif target_format == "Convert to PNG":
+            elif target_format == "Convert JPG to PNG":
                 if file.lower().endswith(".png"):
                     continue  # 이미 PNG인 파일은 변환하지 않음
                 new_path = image_path.rsplit(".", 1)[0] + ".png"
