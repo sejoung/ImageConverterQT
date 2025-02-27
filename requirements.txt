@@ -1,0 +1,6 @@
+pytest
+black
+pylint
+PyQt6
+pillow
+pyinstaller
